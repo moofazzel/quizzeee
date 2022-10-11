@@ -10,8 +10,8 @@ const Navbar = () => {
         <Link to={"/"}>
           <img className="w-60 logo" src={logo} alt="" />
         </Link>
-        <ul className="hidden space-x-3 md:flex items-center">
-          <li className="flex  hover:border-b-4 hover:border-red-400">
+        <ul className="hidden space-x-6 md:flex items-center">
+          <li className="flex leading-9  hover:border-b-4 hover:border-red-400">
             <NavLink
               to={"home"}
               className={({ isActive }) => (isActive ? "active" : undefined)}
@@ -19,12 +19,12 @@ const Navbar = () => {
               Home
             </NavLink>
           </li>
-          <li className="flex  hover:border-b-4 hover:border-red-400">
+          <li className="flex leading-9  hover:border-b-4 hover:border-red-400">
             <NavLink to={"statistics"} className="">
               Statistics
             </NavLink>
           </li>
-          <li className="flex  hover:border-b-4 hover:border-red-400">
+          <li className="flex leading-9  hover:border-b-4 hover:border-red-400">
             <NavLink to={"blog"} className="">
               Blog
             </NavLink>
