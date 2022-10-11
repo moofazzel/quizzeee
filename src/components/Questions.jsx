@@ -2,22 +2,24 @@ import { EyeIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import toast, { Toaster } from "react-hot-toast";
 
-const Questions = ({ questions }) => {
+const Questions = ({ questions, num, setW, setR, w, r }) => {
   const { id, correctAnswer, options, question } = questions;
 
-  let correct = 0;
-  let wrong = 0;
+  // let correct = 0;
+  // let wrong = 0;
 
   const handleOption = (option, e) => {
     if (option === correctAnswer) {
-      correct = correct + 1;
+      setR(r + 1);
       toast("Good Job!", {
         icon: "👏",
       });
       e.currentTarget.classList.add("bg-green-500", "text-white");
     } else {
-      wrong = wrong + 1;
-      toast.error("This didn't work.");
+      setW(w + 1);
+      toast("Wrong Entry", {
+        icon: "😔",
+      });
       e.currentTarget.classList.add("text-white", "bg-red-500");
     }
   };
@@ -49,7 +51,7 @@ const Questions = ({ questions }) => {
     <div className="shadow-lg sm:w-10/12 lg:w-2/4 border border-rose-200 px-7 py-5 rounded-xl">
       <div className="flex justify-between items-start">
         <h3 className="text-xl font-semibold text-center mb-5 max-w-xl">
-          <span className="font-bold">Quiz 1:</span> {question}
+          <span className="font-bold">Quiz {num}:</span> {question}
         </h3>
         <EyeIcon
           onClick={() => handleEye(correctAnswer)}
@@ -62,7 +64,7 @@ const Questions = ({ questions }) => {
           <p
             onClick={(e) => handleOption(option, e)}
             key={id}
-            className=" cursor-pointer border rounded-md p-4 hover:border-3 hover:border-rose-400"
+            className="cursor-pointer border rounded-md p-4 hover:border-3 hover:border-rose-400"
           >
             {option}
             <Toaster position="top-center" reverseOrder={false} />
