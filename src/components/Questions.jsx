@@ -46,9 +46,9 @@ const Questions = ({ questions }) => {
   };
 
   return (
-    <div className="shadow-lg max-w-2xl border border-rose-200 px-7 py-5 rounded-xl">
+    <div className="shadow-lg sm:w-10/12 lg:w-2/4 border border-rose-200 px-7 py-5 rounded-xl">
       <div className="flex justify-between items-start">
-        <h3 className="text-xl font-semibold text-center mb-5 max-w-lg">
+        <h3 className="text-xl font-semibold text-center mb-5 max-w-xl">
           <span className="font-bold">Quiz 1:</span> {question}
         </h3>
         <EyeIcon
@@ -57,12 +57,12 @@ const Questions = ({ questions }) => {
         />
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {options.map((option) => (
           <p
             onClick={(e) => handleOption(option, e)}
             key={id}
-            className="cursor-pointer border rounded-md p-4 hover:border-3 hover:border-rose-400"
+            className=" cursor-pointer border rounded-md p-4 hover:border-3 hover:border-rose-400"
           >
             {option}
             <Toaster position="top-center" reverseOrder={false} />

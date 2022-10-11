@@ -32,7 +32,7 @@ const Quiz = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-5 mt-7">
+      <div className="grid grid-cols-1 place-items-center gap-5 mt-7">
         {questions.map((question) => (
           <Questions key={question.id} questions={question} />
         ))}

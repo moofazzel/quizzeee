@@ -10,13 +10,13 @@ const Topics = ({ topic }) => {
 
   return (
     <div className="rounded-md shadow-md shadow-[#f76f7137] relative border border-rose-200">
-      <div className="text-red-800 absolute top-0 left-0 font-semibold m-2 px-2 pb-[2px] rounded-md bg-[#f76f72]">
+      <div className="text-red-800 absolute top-0 left-0 font-semibold m-2 px-2 pb-[2px] rounded-md bg-[#f76f713f]">
         <small>Total Questions: {total} </small>
       </div>
       <img
         src={logo}
         alt=""
-        className="object-cover object-center w-full rounded-t-md h-72 bg-[rgba(247,111,113,0.10)]"
+        className="object-cover object-center w-full rounded-t-md h-64 bg-[rgba(247,111,113,0.10)]"
       />
       <div className="flex flex-col justify-between p-5 space-y-6">
         <div className="space-y-2">
