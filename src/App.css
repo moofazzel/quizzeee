@@ -37,6 +37,9 @@
   }
 }
 
-.activee{
-  background: #000;
+.header{
+  background: url(./images/2.jpg) no-repeat center;
+  background-color: #fef5f5;
+  background-size: cover;
 }
+

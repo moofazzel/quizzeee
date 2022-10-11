@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 
 const Main = () => {
   return (
-    <div className="bg-[rgba(247,111,113,0.07)] h-screen">
+    <div className="bg-[rgba(247,111,113,0.07)] h-full">
       <Navbar/>
       <Outlet />
     </div>
