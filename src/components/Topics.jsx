@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Topics = ({ topic }) => {
   const { id, name, logo, total } = topic;
@@ -23,13 +24,14 @@ const Topics = ({ topic }) => {
             {name}
           </h2>
         </div>
-        <button
-          onClick={()=> handleQuiz(id)}
-          type="button"
-          className="flex items-center justify-center w-full p-2 font-bold  border border-rose-400 tracking-wide rounded-md bg-[rgba(247,111,113,0.58)] text-rose-700 transition-all hover:bg-rose-400 hover:shadow-lg hover:text-rose-100"
-        >
-          Start Quiz
-        </button>
+        <Link to={`/quiz/${id}`}>
+          <button
+            type="button"
+            className="flex items-center justify-center w-full p-2 font-bold  border border-rose-400 tracking-wide rounded-md bg-[rgba(247,111,113,0.58)] text-rose-700 transition-all hover:bg-rose-400 hover:shadow-lg hover:text-rose-100"
+          >
+            Start Quiz
+          </button>
+        </Link>
       </div>
     </div>
   );
