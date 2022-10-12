@@ -10,7 +10,6 @@ const Quiz = () => {
 
   const [w, setW] = useState(0);
   const [r, setR] = useState(0);
-  console.log(w,r);
 
   let num = 0;
 

@@ -5,6 +5,7 @@ import Error from "./components/Error";
 import Home from "./components/Home";
 import Quiz from "./components/Quiz";
 import Statistics from "./components/Statistics";
+import Chart from "./components/Chart";
 import Main from "./Layout/Main";
 
 function App() {
@@ -24,6 +25,12 @@ function App() {
           loader: async () =>
             fetch("https://openapi.programming-hero.com/api/quiz"),
           element: <Home />,
+        },
+        {
+          path: "chart",
+          loader: async () =>
+            fetch("https://openapi.programming-hero.com/api/quiz"),
+          element: <Chart/>,
         },
         {
           path: "quiz/:quizId",

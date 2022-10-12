@@ -1,11 +1,11 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Navbar from "../components/Navbar";
+import { Nav } from "../components/Nav";
 
 const Main = () => {
   return (
     <div className="bg-[rgba(247,111,113,0.07)] h-full">
-      <Navbar/>
+      <Nav/>
       <Outlet />
     </div>
   );
