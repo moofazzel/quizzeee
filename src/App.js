@@ -2,7 +2,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Blog from "./components/Blog";
 import Error from "./components/Error";
-import Header from "./components/Header";
 import Home from "./components/Home";
 import Quiz from "./components/Quiz";
 import Statistics from "./components/Statistics";
@@ -29,8 +28,9 @@ function App() {
         {
           path: "quiz/:quizId",
           loader: async ({ params }) => {
-            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
-            console.log(params.quizId);
+            return fetch(
+              `https://openapi.programming-hero.com/api/quiz/${params.quizId}`
+            );
           },
           element: <Quiz />,
         },
@@ -39,20 +39,20 @@ function App() {
           element: <Statistics />,
         },
         {
-          path: 'blog',
-          element: <Blog/>
-        }
+          path: "blog",
+          element: <Blog />,
+        },
       ],
     },
     {
-      path: '*',
-      element: <Error/>
-    }
+      path: "*",
+      element: <Error />,
+    },
   ]);
   return (
-    <div>
+    <>
       <RouterProvider router={router} />
-    </div>
+    </>
   );
 }
 

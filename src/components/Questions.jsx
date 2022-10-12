@@ -9,12 +9,13 @@ const Questions = ({ questions, num, setW, setR, w, r }) => {
   // let wrong = 0;
 
   const handleOption = (option, e) => {
+    
     if (option === correctAnswer) {
       setR(r + 1);
       toast("Good Job!", {
         icon: "👏",
       });
-      e.currentTarget.classList.add("bg-green-500", "text-white");
+      e.currentTarget.classList.add("bg-green-500", "text-white",'pointer-events-none');
     } else {
       setW(w + 1);
       toast("Wrong Entry", {

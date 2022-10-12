@@ -7,9 +7,9 @@ const Home = () => {
   const topics = useLoaderData();
   const topicsData = topics.data;
   return (
-    <div>
+    <div className="h-full">
       <Header/>
-      <div className="flex gap-6 flex-wrap justify-center items-center px-4 mt-12 sm:mt-16 md:mt-20 mb-7 md:mb-28">
+      <div className="flex gap-6 flex-wrap justify-center items-center px-4 pt-12 sm:pt-16 md:pt-20 pb-7 md:pb-28">
         {topicsData.map((topic) => (
           <Topics key={topic.id} topic={topic} />
         ))}
